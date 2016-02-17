@@ -4,23 +4,26 @@
  */
 
 export default function(cb) {
-  let _pending = 0, _err;
+  let _pending = 0, _finished = 0, _err;
   return {
     // get _pending() { return _pending; },
     // get _err() { return _err; },
-    retain() { _pending++; },
+    retain() {
+      if (_err) return;
+      _pending++;
+    },
     release() {
       if (_err) return;
       _pending--;
       if (_pending === 0) {
         // TODO: wait for nextTick & re-check
-        cb();
+        _finished++;
+        cb(null, _finished);
       } else if (_pending < 0) {
         throw new Error("retain/release mismatch");
       }
     },
     error(err) {
-      if (_err) return;
       _err = err;
       cb(err);
     },
