@@ -1,6 +1,6 @@
 {
-  "name": "$NAME",
-  "description": "$DESCRIPTION",
+  "name": "asyncaphore",
+  "description": "Simple async helper",
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {

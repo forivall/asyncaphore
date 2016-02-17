@@ -1,6 +1,6 @@
-# $NAME
+# asyncaphore
 
-$DESCRIPTION
+Simple async helper
 
 [![build status](https://secure.travis-ci.org/forivall/errmsg.svg)](http://travis-ci.org/forivall/errmsg)
 [![dependency status](https://david-dm.org/forivall/errmsg.svg)](https://david-dm.org/forivall/errmsg)
@@ -8,7 +8,7 @@ $DESCRIPTION
 ## Installation
 
 ```
-npm install --save errmsg
+npm install --save asyncaphore
 ```
 
 ## Usage
