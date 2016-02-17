@@ -8,7 +8,7 @@ export default function (cb) {
   let _finished = 0;
   let _err;
   return {
-    // get _pending() { return _pending; },
+    _getPending() { return _pending; },
     // get _err() { return _err; },
     retain() {
       if (_err) return;
