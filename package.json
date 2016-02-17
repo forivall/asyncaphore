@@ -1,7 +1,7 @@
 {
   "name": "asyncaphore",
   "description": "Simple async helper",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "dependencies": {},
   "scripts": {
     "lint": "xo src",
@@ -33,7 +33,9 @@
     "url": "git@github.com:forivall/errmsg.git"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   },
   "xo": {
     "space": 2,
