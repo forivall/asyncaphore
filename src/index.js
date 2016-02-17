@@ -3,8 +3,10 @@
  * calls === # of retain calls
  */
 
-export default function(cb) {
-  let _pending = 0, _finished = 0, _err;
+export default function (cb) {
+  let _pending = 0;
+  let _finished = 0;
+  let _err;
   return {
     // get _pending() { return _pending; },
     // get _err() { return _err; },
@@ -20,7 +22,7 @@ export default function(cb) {
         _finished++;
         cb(null, _finished);
       } else if (_pending < 0) {
-        throw new Error("retain/release mismatch");
+        throw new Error('retain/release mismatch');
       }
     },
     error(err) {
